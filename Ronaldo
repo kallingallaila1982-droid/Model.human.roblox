@@ -53,9 +53,17 @@ MainTab:AddButton({
 	Name = "me?",
 	Callback = function()
       		print("Button clicked!")
-            
+Tab2:AddButton({
+	Name = "Ronaldo Script",
+	Callback = function()
+
+		pcall(function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/kallingallaila1982-droid/Model.human.roblox/refs/heads/main/Ronaldo"))()
+		end)
   	end    
 })
+            
+  	  
 
 
 OrionLib:Init()
