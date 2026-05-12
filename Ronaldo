@@ -1,0 +1,61 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+
+local Window = OrionLib:MakeWindow({Name = "stephen", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+local MainTab = Window:MakeTab({
+	Name = "speed",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+ local Tab2 = Window:MakeTab({
+	Name = "jump",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+-- പവർ ടാബ് ഉണ്ടാക്കുന്നു
+local PowerTab = Window:MakeTab({
+	Name = "Superpowers",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+PowerTab:AddButton({
+	Name = "Super Speed",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+            print("Speed set to 100")
+  	end    
+})
+
+
+PowerTab:AddButton({
+	Name = "Infinite Jump",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+            print("Jump Power increased")
+  	end    
+})
+
+
+PowerTab:AddButton({
+	Name = "Force Chat Power",
+	Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/kallingallaila1982-droid/REALFAKECHAT/refs/heads/main/FAKECHATREAL"))()
+  	end    
+})
+
+
+MainTab:AddButton({
+	Name = "me?",
+	Callback = function()
+      		print("Button clicked!")
+            
+  	end    
+})
+
+
+OrionLib:Init()
