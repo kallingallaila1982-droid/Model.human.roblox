@@ -42,19 +42,21 @@ local Tab = Window:CreateTab("abilities", 4483362458) -- Title, Image
 
 local Section = Tab:CreateSection("speed")
 local SpeedSlider = Tab:CreateSlider({
-   Name = "WalkSpeed (Speed)",
-   Increment = 1,
-   Max = 300, -- മാക്സിമം സ്പീഡ് ലിമിറ്റ്
-   Min = 16,  -- സാധാരണ സ്പീഡ്
+   Name = "WalkSpeed Customizer",
+   Min = 1,
+   Max = 750, -- സ്ലൈഡറിൽ 750 studs കാണിക്കാൻ
    CurrentValue = 16,
+   Increment = 5,
    Flag = "SpeedSlider", 
    Callback = function(Value)
+      -- പ്ലെയറിന്റെ ഹ്യൂമനോയിഡ് എടുത്ത് അതിലേക്ക് സ്ലൈഡറിലെ വാല്യൂ കൊടുക്കുന്നു
       local player = game:GetService("Players").LocalPlayer
       if player.Character and player.Character:FindFirstChild("Humanoid") then
-         player.Character.Humanoid.WalkSpeed = Value
+         player.Character.Humanoid.WalkSpeed = 750
       end
    end,
 })
+
 
 local Tab = Window:CreateTab("super jump", 4483362458) -- Title, Image
 
