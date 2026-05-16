@@ -1,1 +1,9 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("by abhianvks", "DarkTheme")
 
+local Tab = Window:NewTab("secret")
+local Section = Tab:NewSection("work")
+Section:NewButton("get a life", "does nothing", function()
+    print("Clicked")
+
+end)
